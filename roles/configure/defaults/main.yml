@@ -1,0 +1,5 @@
+---
+# defaults file for roles/configure
+node_app_repo: "https://github.com/luadham/LB.git"
+app_dir: /tmp
+app_name: LB

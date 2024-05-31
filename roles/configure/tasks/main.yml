@@ -1,0 +1,12 @@
+---
+# tasks file for roles/configure
+- name: Install Node js version 
+  ansible.builtin.yum:
+    name: "{{ packages }}"
+    update_cache: yes
+  when: ansible_facts.distribution in ["RedHat", "Amazon"] 
+
+- name: Clone Node App Repo
+  ansible.builtin.git:
+    repo: "{{ node_app_repo }}"
+    dest: "{{ app_dir }}/{{ app_name }}"

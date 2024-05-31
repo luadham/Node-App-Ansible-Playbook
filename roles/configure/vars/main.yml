@@ -1,0 +1,6 @@
+---
+# vars file for roles/configure
+nodejs_version: "18.13.0"
+packages:
+  - name: nodejs="{{ nodejs_version }}"
+    state: present

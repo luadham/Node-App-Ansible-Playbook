@@ -1,5 +1,5 @@
----
-- Name: Install And Configure Node App 
+- name: Install And Configure Node App 
   hosts: webservers
   roles:
+    - configure
     - install-node-app

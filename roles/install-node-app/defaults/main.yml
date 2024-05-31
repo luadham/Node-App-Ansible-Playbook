@@ -1,2 +1,4 @@
 ---
 # defaults file for roles/install-node-app
+app_dir: /tmp
+app_name: LB

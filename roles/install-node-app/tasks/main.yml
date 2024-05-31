@@ -1,2 +1,16 @@
 ---
 # tasks file for roles/install-node-app
+- name: Install Deps
+  community.general.npm:
+    path: "{{app_dir}}/{{app_name}}"
+    state: present
+
+- name: Start Node App
+  ansible.builtin.command:
+    chdir: "{{app_dir}}/{{app_name}}"
+    cmd: node index.js
+  async: 1000
+  poll: 0
+
+
+
